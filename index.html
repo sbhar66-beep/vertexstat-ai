@@ -1,12 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VertexStat AI</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VertexStat AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:'Inter',sans-serif;
+background:#07111f;
+color:#fff;
+line-height:1.7;
+}
+.container{max-width:1200px;margin:auto;padding:0 24px}
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(7,17,31,.92);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,.08);
+z-index:1000;
+}
+.nav-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+.logo{
+font-size:24px;
+font-weight:700;
+color:#4ea1ff;
+}
+nav a{
+color:#cfd8e3;
+text-decoration:none;
+margin-left:24px;
+font-size:14px;
+}
+.hero{
+padding:150px 0 100px;
+background:radial-gradient(circle at top right,#12365f 0%,#07111f 60%);
+}
+.badge{
+display:inline-block;
+background:rgba(78,161,255,.12);
+border:1px solid rgba(78,161,255,.3);
+padding:8px 16px;
+border-radius:30px;
+font-size:13px;
+color:#7cbcff;
+margin-bottom:24px;
+}
+.hero h1{
+font-size:64px;
+line-height:1.1;
+max-width:900px;
+margin-bottom:24px;
+}
+.hero p{
+max-width:780px;
+font-size:20px;
+color:#b7c5d4;
+margin-bottom:40px;
+}
+.btn{
+display:inline-block;
+padding:14px 28px;
+border-radius:12px;
+background:#4ea1ff;
+color:#fff;
+text-decoration:none;
+font-weight:600;
+margin-right:14px;
+}
+.btn-outline{
+background:transparent;
+border:1px solid rgba(255,255,255,.18);
+}
+.metrics{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:70px;
+}
+.metric{
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.06);
+padding:30px;
+border-radius:20px;
+}
+.metric h2{
+font-size:42px;
+color:#4ea1ff;
+margin-bottom:6px;
+}
+section{
+padding:100px 0;
+}
+.section-title{
+font-size:42px;
+margin-bottom:18px;
+}
+.section-sub{
+color:#a7b7c8;
+max-width:760px;
+margin-bottom:50px;
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px;
+}
+.card{
+background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+border:1px solid rgba(255,255,255,.08);
+padding:32px;
+border-radius:22px;
+}
+.card h3{
+margin-bottom:14px;
+font-size:22px;
+}
+.card p{
+color:#b9c6d3;
+}
+.arch{
+background:#0d1c30;
+border-radius:24px;
+padding:40px;
+overflow:auto;
+}
+.flow{
+display:flex;
+gap:18px;
+align-items:center;
+flex-wrap:wrap;
+justify-content:center;
+}
+.node{
+background:#12243b;
+padding:18px 24px;
+border-radius:14px;
+border:1px solid rgba(255,255,255,.08);
+font-weight:600;
+}
+.arrow{color:#4ea1ff;font-size:28px}
+.tags span{
+display:inline-block;
+padding:6px 12px;
+background:rgba(78,161,255,.12);
+color:#8bc4ff;
+border-radius:20px;
+margin:6px;
+font-size:12px;
+}
+.case{
+margin-top:26px;
+}
+footer{
+padding:50px 0;
+border-top:1px solid rgba(255,255,255,.08);
+text-align:center;
+color:#9bb0c4;
+}
+@media(max-width:768px){
+.hero h1{font-size:42px}
+.hero p{font-size:18px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="container nav-inner">
+<div class="logo">VertexStat AI</div>
+<div>
+<a href="#services">Services</a>
+<a href="#architecture">Architecture</a>
+<a href="#cases">Case Studies</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container">
+<div class="badge">Enterprise AI Transformation Consulting</div>
+<h1>Enterprise AI Transformation for Healthcare, Banking & Operations</h1>
+<p>
+VertexStat AI helps enterprises modernize operations using Generative AI, AI automation, cloud data platforms, PMO intelligence, and enterprise delivery governance.
+</p>
+
+<a href="#contact" class="btn">Schedule Executive AI Session</a>
+<a href="#architecture" class="btn btn-outline">View Architecture</a>
+
+<div class="metrics">
+<div class="metric">
+<h2>25+</h2>
+<p>Years Enterprise Delivery Experience</p>
+</div>
+
+<div class="metric">
+<h2>270+</h2>
+<p>Engineers & Cross-Functional Teams Led</p>
+</div>
+
+<div class="metric">
+<h2>29</h2>
+<p>Agile Teams Managed Across Global Programs</p>
+</div>
+
+<div class="metric">
+<h2>Global</h2>
+<p>Programs Across US, EMEA & APAC</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+<h2 class="section-title">Enterprise AI Consulting Services</h2>
+<p class="section-sub">
+Focused on AI modernization, operational automation, enterprise architecture, and scalable AI delivery governance.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>AI PMO Automation</h3>
+<p>
+Automate executive reporting, RAID tracking, portfolio analytics, governance workflows, and leadership dashboards using GenAI and Power Platform.
+</p>
+</div>
+
+<div class="card">
+<h3>Enterprise GenAI Platforms</h3>
+<p>
+Design secure enterprise-ready RAG and LLM solutions integrated with cloud, data, and operational platforms.
+</p>
+</div>
+
+<div class="card">
+<h3>AI Operations Modernization</h3>
+<p>
+Reduce operational overhead using AI-driven workflows, predictive analytics, service intelligence, and automation pipelines.
+</p>
+</div>
+
+<div class="card">
+<h3>AI Delivery Governance</h3>
+<p>
+Establish scalable AI operating models, Agile governance, vendor coordination, enterprise delivery execution, and transformation leadership.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="architecture">
+<div class="container">
+<h2 class="section-title">Enterprise AI Architecture</h2>
+<p class="section-sub">
+Production-grade AI architecture integrating data pipelines, cloud platforms, GenAI frameworks, and operational dashboards.
+</p>
+
+<div class="arch">
+<div class="flow">
+<div class="node">Enterprise Data Sources</div>
+<div class="arrow">→</div>
+<div class="node">Kafka / Kinesis</div>
+<div class="arrow">→</div>
+<div class="node">Snowflake / Databricks</div>
+<div class="arrow">→</div>
+<div class="node">LLMs / AI Models</div>
+<div class="arrow">→</div>
+<div class="node">LangChain / RAG APIs</div>
+<div class="arrow">→</div>
+<div class="node">Power BI / Automation</div>
+</div>
+
+<div class="tags" style="margin-top:30px;text-align:center">
+<span>AWS</span>
+<span>Azure</span>
+<span>Oracle OCI</span>
+<span>Databricks</span>
+<span>Snowflake</span>
+<span>LangChain</span>
+<span>OpenAI</span>
+<span>Power BI</span>
+<span>Power Automate</span>
+<span>CI/CD</span>
+<span>Observability</span>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="cases">
+<div class="container">
+<h2 class="section-title">Illustrative Enterprise Case Studies</h2>
+
+<div class="grid">
+
+<div class="card case">
+<h3>AI PMO Automation — Healthcare</h3>
+<p>
+Automated executive reporting across 12 delivery teams using Power Automate, Power BI, and GenAI-generated summaries.
+</p>
+<div class="tags">
+<span>65% Reporting Reduction</span>
+<span>200+ Hours Saved</span>
+<span>Executive Dashboards</span>
+</div>
+</div>
+
+<div class="card case">
+<h3>AI Service Operations — Financial Services</h3>
+<p>
+Designed AI-powered service operations workflows using RAG and observability data to improve incident triage and resolution.
+</p>
+<div class="tags">
+<span>RAG</span>
+<span>Operations AI</span>
+<span>Incident Automation</span>
+</div>
+</div>
+
+<div class="card case">
+<h3>AI Test Automation — Enterprise Platforms</h3>
+<p>
+Created AI-assisted testing and release intelligence pipeline integrated with CI/CD and defect analytics workflows.
+</p>
+<div class="tags">
+<span>CI/CD</span>
+<span>Quality Engineering</span>
+<span>AI Automation</span>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2 class="section-title">Certifications & Enterprise Credentials</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>AI & Cloud</h3>
+<p>
+Oracle OCI Generative AI • OCI Data Science • AI Vector Search • AWS AI Practitioner • Azure AI Engineer
+</p>
+</div>
+
+<div class="card">
+<h3>Program & Agile</h3>
+<p>
+PMP • PMI-ACP • SAFe SPC • SAFe LPM • CPMAI™
+</p>
+</div>
+
+<div class="card">
+<h3>Consulting & Leadership</h3>
+<p>
+Certified AI Consultant (USAII®) • Salesforce Administrator • Agile Coaching • Kanban Systems Design
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<h2 class="section-title">Schedule an Executive AI Transformation Session</h2>
+<p class="section-sub">
+A strategic working session to identify automation, AI modernization, and operational efficiency opportunities.
+</p>
+
+<a class="btn" href="mailto:sbhar66@gmail.com">Contact VertexStat AI</a>
+</div>
+</section>
+
+<footer>
+VertexStat AI · Enterprise AI Consulting · Huntersville, NC
+</footer>
+
+</body>
 </html>
